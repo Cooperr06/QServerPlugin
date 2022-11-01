@@ -1,0 +1,46 @@
+name: QServerPlugin
+version: '${project.version}'
+main: de.cooperr.qserverplugin.QServerPlugin
+api-version: 1.19
+prefix: QServer
+authors: [ Cooperr06 ]
+description: Plugin für den Q11 Minecraft Server
+website: https://www.cooperr.de
+
+permissions:
+  qserver.command.discord:
+    description: Berechtigung zum Ausführen des Discord Commands
+    default: true
+  qserver.command.inventory:
+    description: Berechtigung zum Ausführen des Inventory Commands
+    default: op
+  qserver.command.playtime:
+    description: Berechtigung zum Ausführen des Playtime Commands
+    default: true
+  qserver.command.vanish:
+    description: Berechtigung zum Ausführen des Vanish Commands
+    default: op
+
+commands:
+  discord:
+    description: Lädt dich zum offiziellen Discord Server ein
+    usage: /discord
+    aliases:
+      - dc
+    permission: qserver.command.discord
+  inventory:
+    description: Zeigt dir das Inventar eines anderen Spielers
+    usage: /inventory <target>
+    aliases:
+      - inv
+    permission: qserver.command.inventory
+  playtime:
+    description: Zeigt dir die Spielzeit von dir oder anderen Spielern
+    usage: /playtime [target]
+    permission: qserver.command.playtime
+  vanish:
+    description: Versteckt dich vor anderen Spielern
+    usage: /vanish
+    aliases:
+      - v
+    permission: qserver.command.vanish
