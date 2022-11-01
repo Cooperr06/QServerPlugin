@@ -1,2 +1,6 @@
+# IntelliJ IDEA
+.idea
+QServerPlugin.iml
+
 # Project exclude paths
-/target/
+target
