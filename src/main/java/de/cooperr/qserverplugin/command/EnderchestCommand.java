@@ -14,9 +14,9 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class InventoryCommand extends PaperCommand {
+public class EnderchestCommand extends PaperCommand {
     
-    public InventoryCommand(@NotNull PaperPlugin plugin) {
+    public EnderchestCommand(@NotNull PaperPlugin plugin) {
         super(plugin);
     }
     
@@ -42,7 +42,7 @@ public class InventoryCommand extends PaperCommand {
             return true;
         }
         
-        player.openInventory(target.getInventory());
+        player.openInventory(target.getEnderChest());
         return true;
     }
     
@@ -80,11 +80,11 @@ public class InventoryCommand extends PaperCommand {
     
     @Override
     public @NotNull String getCommandName() {
-        return "inventory";
+        return "enderchest";
     }
     
     @Override
     public @NotNull String getCommandUsage() {
-        return "/inventory <target>";
+        return "/enderchest <target>";
     }
 }

@@ -2,10 +2,7 @@ package de.cooperr.qserverplugin;
 
 import de.cooperr.cppluginutil.CustomConfig;
 import de.cooperr.cppluginutil.PaperPlugin;
-import de.cooperr.qserverplugin.command.DiscordCommand;
-import de.cooperr.qserverplugin.command.InventoryCommand;
-import de.cooperr.qserverplugin.command.PlaytimeCommand;
-import de.cooperr.qserverplugin.command.VanishCommand;
+import de.cooperr.qserverplugin.command.*;
 import de.cooperr.qserverplugin.listener.AsyncChatListener;
 import de.cooperr.qserverplugin.listener.PlayerJoinListener;
 import de.cooperr.qserverplugin.listener.PlayerPostRespawnListener;
@@ -45,6 +42,7 @@ public final class QServerPlugin extends PaperPlugin {
     @Override
     protected void commandRegistration() {
         new DiscordCommand(this);
+        new EnderchestCommand(this);
         new InventoryCommand(this);
         new PlaytimeCommand(this);
         new VanishCommand(this);
